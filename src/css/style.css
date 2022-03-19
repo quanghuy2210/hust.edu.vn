@@ -1,0 +1,1129 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    font-size: 12px;
+}
+.container{
+    width: 100%;
+    height: auto;
+}
+
+/* contact - facebook - youtube..... */
+.contact{
+    position: fixed;
+    bottom:26vh;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    z-index: 999;
+}
+.icon-contact{
+    width: 50px;
+    height: 52px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.icon-contact img{
+    width: 65%;
+    height: 60%;
+}
+.icon-contact:first-child{
+    background-color: #3b5998;
+}
+.icon-contact:nth-child(2){
+    background-color: #b00;
+}
+.icon-contact:nth-child(3){
+    background-color: #007bb5;
+}
+.icon-contact:nth-child(4){
+    background-color: #dd4b39;
+}
+.icon-contact:last-child{
+    background-color:#55acee ;
+}
+
+/* header - phần đầu trang */
+.header{
+    width: 100%;
+    height: auto;
+}
+.header-backgroup-top{
+    width: 100%;
+    min-height: 10px;
+    background-color: #9c1010;
+}
+.header-top{
+    padding: 5px 150px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.header-contact{
+    font-size: 1.15rem;
+    display: flex;
+    justify-content: flex-end;
+}
+.header-contact a{
+    text-decoration: none;
+    color: #000;
+}
+.header-contact a:first-child:hover{
+    text-decoration: underline;
+}
+.header-contact a:nth-child(2):hover{
+    text-decoration: underline;
+}
+.header-contact span{
+    margin: 0 5px;
+}
+.header-contact a:last-child{
+    margin-left: 3px;
+}
+.search-header{
+    margin-top: 10px;
+    display: flex;
+}
+.search-header form input{
+    min-width: 210px;
+    min-height: 26px;
+    padding: 2px 5px;
+    border:1px solid #ccc;
+    border-radius: 2px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -ms-border-radius: 2px;
+    -o-border-radius: 2px;
+}
+.search-header a{
+    margin-left: 5px;
+}
+.search-header a img{
+    min-width: 25px;
+    min-height: 25px;
+}
+.header-top-center-mobile{
+    display: none;
+}
+.check-menu{
+    display: none;
+}
+.menu-mobile{
+    height: 100vh;
+    min-width: 220px;
+    position: fixed;
+    right: 0;
+    top: 0;
+    list-style-type: none;
+    background-color: #4e4e4e;
+    transform:translateX(100%) ;
+    -webkit-transform:translateX(100%) ;
+    -moz-transform:translateX(100%) ;
+    -ms-transform:translateX(100%) ;
+    -o-transform:translateX(100%) ;
+}
+.item-menu-mobile{
+    min-height: 40px;
+    padding-left: 10px;
+    border-bottom:1px solid #303030;
+    display: flex;
+    align-items: center;
+}
+.item-menu-mobile:hover{
+    background-color: #303030;
+}
+.item-menu-mobile a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+.item-menu-mobile a:hover{
+    text-decoration: underline;
+}
+.check-menu:checked ~ .menu-mobile{
+    transform: translateX(0);
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
+}
+
+.header-student{
+    max-width: 134px;
+    font-size: 0.8rem;
+    list-style-type: none;
+}
+.item-student a{
+    text-decoration: none;
+    color: #6D6E71;
+    display: flex;
+}
+.item-student a img{
+    max-width: 45px;
+    margin-right: 10px;
+}
+.item-student:nth-child(2){
+    margin: 5px 0;
+}
+.header-banner{
+    padding: 0 150px 1px;
+    background-image: url(../img/bg-baner.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.list-menu{
+    list-style-type: none;
+    display: flex;
+    position: relative;
+}
+.item-menu{
+    padding: 0 10px;
+    border-left: 1px solid #303030;
+    background-color: #4e4e4e;
+    display: flex;
+    align-items: center;
+}
+.item-menu:first-child{
+    padding: 0; 
+    border: none;
+}
+.item-menu:last-child{
+    flex-grow: 1;
+}
+.item-menu a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.3rem;
+}
+.sub-menu{
+    min-width: 250px;
+    position: absolute;
+    top: 45px;
+    list-style: none;
+    transform: translateX(-11px);
+    -webkit-transform: translateX(-11px);
+    -moz-transform: translateX(-11px);
+    -ms-transform: translateX(-11px);
+    -o-transform: translateX(-11px);
+    display: none;
+}
+.item-sub-menu{
+    min-height: 40px;
+    padding-left: 10px;
+    background-color: #303030;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-bottom: 1px solid #fff;
+}
+.item-sub-menu a{
+    font-size: 1.15rem;
+}
+.item-menu a:hover{
+    text-decoration: underline;
+}
+.item-menu:hover{
+    background-color: #303030;
+}
+.item-menu:first-child:hover{
+    background-color: #4e4e4e;
+}
+.item-menu:hover .sub-menu{
+    display: block;
+}
+.img-banner{
+    width: 100%;
+    height: 55vh;
+}
+.img-banner img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.header-bottom{
+    padding: 15px 150px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.3rem;
+}
+.header-bottom-content{
+    margin:0 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.header-bottom-content:first-child{
+    margin: 0;
+}
+.header-bottom a img{
+    max-width: 25px;
+    min-height: 25px;
+}
+.header-bottom-content h3{
+    margin-top: 10px;
+    font-weight: 100;
+}
+.header-bottom-content h3 a{
+    text-decoration: none;
+    color: #333;
+}
+.header-bottom-content h3 a:hover{
+    color: #0077b3;
+    text-decoration: underline 2px ;
+}
+
+/* news - Tin tức */
+
+.news{
+    width: 100%;
+    height: auto;
+    padding: 20px 150px;
+    display: flex;
+}
+.news-left{
+   width: 75%;
+   margin-right: 20px;
+   padding-right: 20px;
+   border-top: 1px solid #ccc;
+}
+.title{
+    margin: 20px 0;
+    font-size: 2rem;
+    color: #be0f0f;
+    font-weight: 100;
+}
+.news-details{
+    display: flex;
+    justify-content: space-between;
+}
+.news-content:nth-child(2){
+    padding: 0 24px;
+}
+.news-content-img{
+    display: block;
+    min-width: 240px;
+    max-width: 240px;
+    height: 155px;
+   
+}
+.news-content-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.title-post{
+    margin-top: 5px;
+}
+.title-post a{
+    font-size: 1.15rem;
+    text-decoration: none;
+    color: #000;
+    font-weight: 100;
+    line-height: 20px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+  	text-overflow: ellipsis;
+}
+.title-post a:hover{
+    text-decoration: underline;
+    color: #0077b3;
+}
+.hot-news{
+    width: 25%;
+    border-top: 1px solid #ccc;
+}
+
+.list-hot-news{
+    list-style-type: none;
+}
+.item-hot-news{
+    margin-bottom: 10px;
+    color: #be0f0f;
+    display: flex;
+    align-items: flex-start;
+}
+.item-hot-news img{
+    margin:6px 10px 0 0 ;
+}
+.item-hot-news a{
+    font-size: 1.15rem;
+    text-decoration: none;
+    color: #000;
+    line-height: 20px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+  	text-overflow: ellipsis;
+}
+.item-hot-news a:hover{
+    text-decoration: underline;
+    color: #0077b3;
+}
+.open-news{
+    font-size: 1.15rem;
+    color:#9c1010;
+    text-decoration: none;
+}
+.open-news:hover{
+    text-decoration: underline;
+}
+
+/* events - sự kiện */
+.events{
+    width: 100%;
+    height: auto;
+    padding: 20px 150px 10px;
+    display: flex;
+    background-color: #e1e1e1;
+}
+.big-event{
+    width: 75%;
+    padding-right: 20px;
+}
+.big-event-details{
+    display: flex;
+}
+.big-event-right{
+    margin-right: 20px;
+}
+.big-event-right a:first-child {
+    margin-bottom: 20px;
+    display: block;
+    width: 485px ;
+    height: 235px ;
+}
+.big-event-right a:first-child img{
+    width: 100%;
+    height: 100%;
+}
+.big-event-right a:last-child {
+    text-decoration: none;
+    color: #484848;
+    font-weight: bold;
+    font-size: 1.15rem;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
+  	text-overflow: ellipsis;
+}
+.big-event-right a:last-child:hover {
+    text-decoration: underline;
+    color: #0077b3;
+}
+.item-big-event a{
+    line-height: 25px;
+    text-align: justify;
+}
+.upcoming-events{
+    width: 25%;
+}
+.upcoming-events-details{
+    display: flex;
+    flex-direction: column;
+}
+.upcoming-events-details a:first-child{
+    margin-bottom: 20px;
+    text-decoration: none;
+    color: #000;
+    display: flex;
+    font-size: 1.15rem;
+}
+.upcoming-events-details a:first-child span:last-child{
+    line-height: 20px;
+}
+.upcoming-events-details a:first-child:hover span:last-child{
+    color: #0077b3;
+}
+.calendar{
+    min-width: 60px;
+    min-height: 40px;
+    margin-right: 10px;
+    background-color: #9c1010;
+    font-weight: 600;
+    font-size: 1.15rem;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* admissions - tuyển sinh */
+
+.admissions{
+    width: 100%;
+    height: auto;
+    padding: 30px 150px;
+}
+.admissions-details{
+    display: flex;
+}
+.university{
+    width: 50%;
+    display: flex;
+}
+.university:first-child{
+    margin-right: 20px;
+}
+.university a img{
+    width: 325px;
+    height: 217px;
+}
+.university-content{
+    margin-left: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.title-university a{
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: #000;
+
+}
+.title-university a:hover{
+    text-decoration: underline 2px;
+}
+.para-university{
+    margin-top: 10px;
+    font-size: 1.15rem;
+    line-height: 20px;
+    text-align: justify;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 6;
+    overflow: hidden;
+  	text-overflow: ellipsis;
+}
+
+/* work - hoạt động sinh viên */
+.work{
+    width: 100%;
+    height: auto;
+    padding: 30px 150px;
+    background-color: #e1e1e1;
+}
+.work-details{
+    display: flex;
+    justify-content: space-between;
+}
+.work-content{
+    width: 32.5%;
+}
+.work-content-top{
+    display: flex;
+    align-items: center;
+    background-color: #9c1010;
+}
+.work-content-top a{
+    width: 50%;
+    height: 156px;
+}
+.work-content-top a img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.title-work{
+    width: 50%;
+    
+}
+.title-work a{
+    width: 100%;
+    font-size: 1.3rem;
+    color: #fff;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.title-work a:hover{
+    text-decoration: underline #0077b3;
+}
+.para-work{
+    margin: 20px 0;
+    height: 60px;
+    font-size: 1.15rem;
+    line-height: 20px;
+}
+.item-work a{
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+  	text-overflow: ellipsis;
+    color: #877272;
+}
+
+/* footer - phần cuối trang */
+.footer{
+    width: 100%;
+    height: auto;
+    padding: 40px 150px 120px;
+    background-image: url(../img/footer.png) ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: space-between;
+}
+.title-footer{
+    font-size: 1.5rem;
+    color: #fff;
+    font-weight: 500;
+}
+.map h4{
+    margin: 10px 0;
+    font-size: 1.1rem;
+    color: #fff;
+    font-weight: 500;
+}
+.gg-map{
+    max-width: 210px;
+    max-height: 141px;
+}
+.gg-map iframe{
+    width: 100%;
+    height: 100%;
+}
+.img-network{
+    margin: 10px 0 30px;
+    display: flex;
+}
+.img-network a{
+    width: 30px;
+    height: 30px;
+    margin-right: 5px;
+}
+.img-network a img{
+    width: 100%;
+    height: 100%;
+}
+.btn-network{
+    cursor: pointer;
+    padding: 5px 20px;
+    color: #be1f16;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+.information-top{
+    padding: 0 20px 0 50px ;
+    display: flex;
+}
+.list-information{
+    margin-right: 50px;
+    list-style-type: none;
+}
+.item-information{
+    margin-bottom: 15px;
+}
+.item-information a{
+    font-size: 1.15rem;
+    text-decoration: none;
+    color: #fff;
+}
+.item-information a:hover{
+    text-decoration: underline #fff;
+}
+.diagram h2{
+    margin-bottom: 10px;
+}
+.diagram a{
+    font-size: 1.15rem;
+    text-decoration: none;
+    color: #fff;
+}
+.diagram a:hover{
+    text-decoration: underline #fff;
+}
+.information-bottom{
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    border-top: 2px solid #fff;
+    color: #fff;
+}
+.information-bottom span{
+    margin-top: 5px;
+    font-size: 1.15rem;
+}
+
+/* chat - gửi tin nhắn giải đáp */
+.chat{
+    position: fixed;
+    left: 10px;
+    bottom: 80px;
+    z-index: 999;
+    
+}
+.icon-chat{
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    background-color: #9c1010;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.mess{
+    min-width: 300px;
+    max-width: 300px;
+    position: absolute;
+    left: 50px;
+    bottom: -50px;
+    background-color: #e1e1e1;
+    display: none;
+
+}
+.top-mess{
+    padding: 10px 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #9c1010;
+
+}
+.title-mess{
+    font-size: 1.3rem;
+    color: #fff;
+    font-weight: 500;
+}
+.close-chat{
+    cursor: pointer;
+}
+.header-mess{
+    padding: 10px;
+    display: flex;
+}
+.logo-mess{
+    display: block;
+    min-width: 40px;
+    max-width: 40px;
+    height: 55px;
+}
+.logo-mess img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.para-mess{
+    margin-left: 10px;
+    font-size: 1.15rem;
+    line-height: 18px;
+}
+.details-mess{
+    padding: 10px;
+}
+.details-mess form{
+    display: flex;
+    flex-direction: column;
+}
+.details-mess form label{
+    margin: 5px 0;
+    font-size: 1.15rem;
+    color: #4e4e4e;
+}
+.details-mess form label span{
+   color: #b00;
+   font-size: 1.3rem;
+}
+.txt-input{
+    padding: 5px 10px;
+    max-width: 260px;
+}
+.details-mess form span{
+    margin: 5px;
+    font-size: 1.15rem;
+    color: #4e4e4e;
+}
+.submit{
+    cursor: pointer;
+    margin-top:5px ;
+    min-height: 30px;
+    max-width: 80px;
+    min-width: 80px;
+    font-weight: bold;
+    border: none;
+    color: #fff;
+    background-color: #9c1010;
+}
+.show{
+    display: block;
+}
+
+
+/* màn hình tablet - máy tính bảng */
+
+@media only screen and (max-width: 992px){
+    .contact{
+        bottom: 0;
+    }
+    
+    .header-top{
+        padding: 20px;
+    }
+    .logo{
+        width: 50%;
+    }
+    .logo a img{
+        width: 100%;
+        object-fit: cover;
+    }
+    .header-student{
+        display: none;
+    }
+    .header-banner{
+        padding: 0;
+    }
+    .item-menu a{
+        font-size: 0.9rem;
+    }
+    .sub-menu{
+        min-width: 180px;
+        top: 43px;
+    }
+    .item-sub-menu{
+        min-height: 30px;
+    }
+    .img-banner{
+        height: 26vh;
+    }
+    .header-bottom{
+        padding: 10px 30px;
+        flex-wrap: wrap;
+        font-size: 1.2rem;
+    }
+    .header-bottom-content{
+        width: 20%;
+        padding: 5px 20px;
+    }
+    .header-bottom-content:first-child{
+         order: 11;
+    }
+    .header-bottom-content:nth-child(2){
+         order: 12;
+    }
+    .header-bottom-content:nth-child(3){
+        order: 5;
+    }
+    .header-bottom-content:nth-child(4){
+        order: 6;
+    }
+    .header-bottom-content:nth-child(5){
+        order: 7;
+    }
+    .header-bottom-content:nth-child(6){
+        order: 8;
+    }
+    .header-bottom-content:nth-child(7){
+        order: 1;
+    }
+    .header-bottom-content:nth-child(8){
+        order: 2;
+    }
+    .header-bottom-content:nth-child(9){
+        order: 3;
+    }
+    .header-bottom-content:nth-child(10){
+        order: 9;
+    }
+    .header-bottom-content:nth-child(11){
+        order: 10;
+    }
+    .header-bottom-content:last-child{
+        order: 4;
+    }
+
+    .news{
+        padding:10px 30px;
+        flex-wrap: wrap;
+    }
+    .news-left{
+        width: 100%;
+        margin-right: 0;
+        padding-right: 0;
+    }
+    .news-content{
+        width: 32%;
+    }
+    .news-content:nth-child(2){
+        padding: 0;
+        margin: 0;
+    }
+    .title-post a{
+        -webkit-line-clamp: 4;
+    }
+   
+    .hot-news{
+        width: 100%;
+        max-width: 70% ;
+        margin-top: 30px;
+    }
+    .events{
+        padding: 10px 30px;
+    }
+    .big-event{
+        width: 70%;
+    }
+    .big-event-details{
+        flex-direction: column;
+    }
+    .big-event-right{
+        margin-right: 0;
+    }
+    .big-event-right a:first-child {
+        width: 100% ;
+    }
+    .upcoming-events{
+        width: 30%;
+    }
+    .admissions{
+        padding: 10px 30px;
+    }
+    .admissions-details{
+        flex-wrap: wrap;
+    }
+    .university{
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    .work{
+        padding: 10px 30px;
+    }
+    .work-details{
+        flex-wrap: wrap;
+    }
+    .work-content{
+        width: 100%;
+    }
+    .para-work{
+        height: auto;
+    }
+    .footer{
+        padding:50px 30px 120px;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        background-image: url(../img/footerTablet.png);
+    }
+    .information{
+        width: 100%;
+        margin-top: 50px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .information-bottom{
+        margin-top: 10px;
+        padding: 0 30px;
+        align-items: center;
+    }
+    .information-bottom h3{
+        margin-top: 20px;
+    }
+    
+
+    
+    .title-mess{
+        padding: 5px 0;
+    }
+    .header-mess{
+        padding: 5px;
+    }
+    .para-mess{
+        margin-left: 5px;
+    }
+    .details-mess{
+        padding: 5px;
+    }
+    
+
+}
+
+/* màn hình mobile - điện thoại */
+@media only screen and (max-width:768px){
+    .icon-contact{
+        width: 40px;
+        height: 42px;
+    }
+    .header-top{
+        padding: 0 20px;
+    }
+    .header-top-center{
+        display: none;
+    }
+    .list-menu{
+        display: none;
+    }
+    .header-bottom-content{
+        padding: 5px 0;
+        margin:  0 ;
+        width: 25%;
+    }
+    .header-top-center-mobile{
+        display: flex;
+        align-items: center;
+        font-size: 1.2rem;
+    }
+    .item-header-mobile{
+        min-height: 100px;
+        padding: 0 10px;
+        border-left: 1px solid #ccc;
+        display: flex;
+    }
+    .item-header-mobile:first-child label{
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+    }
+    .item-header-mobile:nth-child(2){
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .item-header-mobile:last-child{
+        flex-direction: column;
+        justify-content: space-evenly;
+        border-right: 1px solid #ccc;
+    }
+    .item-header-mobile a{
+        text-decoration: none;
+        color: #000;
+    }
+
+    .news-details{
+        flex-wrap: wrap;
+
+    }
+    .news-content{
+        width: 100%;
+    }
+    .news-content:nth-child(2){
+        margin: 10px 0;
+    }
+    .title-post{
+        max-width: 80%;
+    }
+    
+    .hot-news{
+        max-width: 100%;
+        margin-top: 20px;
+    }
+    
+
+    .events{
+        flex-wrap: wrap;
+    }
+    .big-event{
+        width: 100%;
+        padding-right: 0;
+    }
+    .big-event-right a:first-child {
+        max-height: 200px ;
+    }
+    .upcoming-events{
+        width: 100%;
+    }
+    .admissions-details{
+        flex-wrap: wrap;
+    }
+    .university{
+        width: 100%;
+        flex-wrap: wrap;
+    }
+    .university a img{
+        width: 100%;
+    }
+    .university-content{
+        margin-left: 0;
+        width: 100%;
+    }
+    .university:first-child{
+        margin-right: 0;
+    }
+    .footer{
+        padding: 30px 10px 140px;
+        flex-direction: column;
+        align-items: center;
+        background-image: url( ../img/footerMobile.jpg);
+    }
+    .social-network{
+        margin-top: 30px;
+    }
+    .information-top{
+        padding: 0;
+        margin-bottom: 10px;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .list-information{
+        margin: 0;
+    }
+    .diagram{
+        width: 100%;
+    }
+    .information-bottom{
+        padding: 10px;
+        align-items: center;
+    }
+
+    .chat{
+        left: 0;
+        bottom: 0;
+    }
+    .icon-chat {
+        position: absolute;
+        left: 10px;
+        bottom: 60px;
+      }
+    .mess{
+        min-height: 100vh;
+        min-width: 100vw;
+        left: 0px;
+        bottom: 0px;
+    }
+    .top-mess{
+        padding: 10px;
+    }
+    .header-mess{
+        padding: 10px;
+    }
+    .para-mess{
+        margin-left: 10px;
+    }
+    .details-mess{
+        padding: 10px;
+    }
+    
+}
